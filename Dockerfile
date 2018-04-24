@@ -13,6 +13,7 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
       git-lfs \
       locales \
       librsvg2-bin \
+      openssh-client \
     && git lfs install \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && gem install bundler fastlane --no-rdoc --no-ri \
