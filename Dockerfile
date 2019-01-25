@@ -17,10 +17,9 @@ RUN apt-get -qq update \
       openssh-client \
     && git lfs install \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && gem install bundler fastlane --no-rdoc --no-ri \
+    && gem install bundler:1.17.3 bundler fastlane --no-rdoc --no-ri \
     && locale-gen en_US.UTF-8
-    
+
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
 WORKDIR /data
-
